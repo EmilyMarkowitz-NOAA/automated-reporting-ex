@@ -1,6 +1,6 @@
 ---
 title: "Talk like a Pirate!"
-format: pdf
+format: docx
 ---
 
 <!-- Here in the 'setup' code chunk, we are stating that -->
@@ -23,38 +23,46 @@ This example expands on the previous example, but includes more skill building. 
 
 ```{r data-wrangle}
 
-# Download Data ----------------------------------------------------------------
-
-library(here)
-library(googledrive)
-googledrive::drive_deauth()
-googledrive::drive_auth() # connect R to google drive
-1 # to pick the first auth option
-googledrive::drive_download( 
-  file = googledrive::as_id("https://docs.google.com/spreadsheets/d/1bLc_QS8zKcXW4umlAeR2GRBMMtCJHTqen-Ur0yQEHm4"), # download a specific document from google drive by it's ID
-  path = here::here("data", "code2_madlib"), # save your data
-  type = "csv", # save your data as a csv
-  overwrite = TRUE) # allow the funtion to overwrite the csv with the latest and greatest
-
 # Load Data --------------------------------------------------------------------
-
-dat0 <- read.csv(file = here::here("data", "code2_madlib.csv"), 
+library(here)
+dat0 <- read.csv(file = here::here("data", "madlib_resp.csv"), 
                 header = TRUE)
 
+# Wrangle Data -----------------------------------------------------------------
 # remove EHM test data
-if (nrow(dat0)>1) {
+if (nrow(dat0)>2) {
   dat0 <- dat0[-1,] 
 }
 ```
 
-## MadLib Responces
+## MadLib Responses
 
-These MadLib responses were generated on `r `Sys.Date()`. 
+These MadLib responses were generated on `r Sys.Date()`. 
 
 ```{r madlib-responces, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+
+# Functions --------------------------------------------------------------------
+
+#' Determine if a word should be preceeded by "a" or "an" in text
+#'
+#' @param text Character. A word or phrase to consider. The function will only use the first character of the entry. 
+#'
+#' @examples
+#` a_or_an(text = "Elephant")
+#` a_or_an(text = "mammoth")
+a_or_an <- function(text = "b") {
+  out <- ifelse(test = # is the first letter a vowel?
+                  substr(x = tolower(text), start = 1, stop = 1) %in% 
+                  c("a", "e", "i", "o", "u"), 
+                yes = "an", 
+                no = "a")
+  return(out)
+}
+
+# Loop through qmd -------------------------------------------------------------
+
 src <- list() # an empty list to put all of the entry outputs in
 for (i in 1:nrow(dat0)) { # cycle through each row of the spreadsheet
-  dat <- dat0[i,] # subset data to the row of interest
   # dynamically fill out the madlib template and add output to the list
   src[[i]] <- knitr::knit_expand(
     file = here::here('code2_child_params','template2_child_madlib_responces.qmd'))
@@ -63,9 +71,4 @@ for (i in 1:nrow(dat0)) { # cycle through each row of the spreadsheet
 ```
 
 `r paste(knitr::knit(text = unlist(src)), collapse = '\n')`
-
-<!-- the below chunk is pulling calling a child doc (`child = ...`) and must otherwise remain empty-->
-
-```{r assess-madlib_respones, child=here::here("code2_child_params", "template2_child_assess.qmd")}
-```
 

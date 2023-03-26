@@ -2,9 +2,37 @@
 <!-- This child doc will, unless otherwise specified, -->
 <!-- inherit all of the formatting of the parent qmd -->
 
-## What kinds of responces did users submit?
 
-```{r assess}
+## Methods
+
+The original MadLib prompt was reformmated into a `.qmd` (Fig. @fig-madlib). 
+
+```{r}
+#| label: fig-madlib
+#| fig-cap: "The original MadLib prompt. "
+
+knitr::include_graphics(here::here("img","madlib_pirate.png"))
+```
+
+## Results: What kinds of responces did users submit?
+
+Collectively, the google form had `r nrow(dat)` responses (Table @tab-madlib-resp). 
+
+```{r}
+#| label: tab-madlib-resp
+#| fig-cap: "The raw google form responces. "
+
+library(gt)
+gt(dat)
+```
+
+
+In the below word cloud, we see if there were any common responses across enteries (fig. @fig-madlib-wordcloud). 
+
+```{r}
+#| label: fig-madlib-wordcloud
+#| fig-cap: "Wordcloud of MadLib google form responces. "
+
 # https://towardsdatascience.com/create-a-word-cloud-with-r-bde3e7422e8a
 
 # Install libraries ------------------------------------------------------------
@@ -24,7 +52,7 @@ for (p in PKG) { # this loops through each package,
 dat1 <- data.frame(
   table( # find frequency of terms used
     data.frame(t( # slightly transform input data
-      dat[,-c(1:2)])))) # remove Timestamp and Author columns
+      dat0[,-c(1:2)])))) # remove Timestamp and Author columns
 names(dat1) <- c("words", "Freq")
 
 # Create figure -----------------------------------------------------------------

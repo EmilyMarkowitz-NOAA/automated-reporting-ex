@@ -12,3 +12,10 @@ tlmgr_install('montserrat')
 xelatex('Report.tex')
 
 # https://yihui.org/tinytex/r/#debugging
+update.packages(ask = FALSE, checkBuilt = TRUE)
+tinytex::tlmgr_update()
+tinytex::reinstall_tinytex()
+options(tinytex.verbose = TRUE)
+
+# https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
+

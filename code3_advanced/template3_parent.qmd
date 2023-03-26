@@ -1,0 +1,64 @@
+---
+title: "Talk like a Pirate!"
+subtitle: "`r paste0('DRAFT: ', format(Sys.time(), '%B %d, %Y'))`"
+format: 
+  html: default
+  docx:
+    reference-doc: "../templates/format_styles_word_document.docx"
+  pdf: 
+    geometry:
+      - top=0.75in
+      - right=0.75in
+      - bottom=0.75in
+      - left=0.75in
+      - heightrounded
+    number-sections: true
+    toc: false
+editor: source
+execute:
+  warning: false
+  echo: false
+  message: false
+  error: false
+params: 
+  dat0: data.frame()
+---
+
+<!-- Instead of the 'setup' code chunk, are able to add the setup parameters to the YAML -->
+<!-- Instead of loading content within the `.qmd` we include the elements as params in the YAML -->
+
+# About example 3
+
+This example expands on the previous example. Here you will learn:
+
+ - Call .qmd from .r script
+ - Play around with the YAML
+ - Apply table and figure cross referencing
+ - Apply citation cross referencing
+
+> This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
+
+## MadLib Responses
+
+These MadLib responses were generated on `r `Sys.Date()`. 
+
+```{r madlib-responces, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+
+# Loop through qmd -------------------------------------------------------------
+
+src <- list() # an empty list to put all of the entry outputs in
+for (i in 1:nrow(dat0)) { # cycle through each row of the spreadsheet
+  # dynamically fill out the madlib template and add output to the list
+  src[[i]] <- knitr::knit_expand(
+    file = here::here('code3_child_params','template3_child_madlib_responces.qmd')) # verbatim the same to code2 example
+}
+# below, print the output from the spreadsheet used in the madlib template
+```
+
+`r paste(knitr::knit(text = unlist(src)), collapse = '\n')`
+
+<!-- the below chunk is pulling calling a child doc (`child = ...`) and must otherwise remain empty-->
+
+```{r assess-madlib_respones, child=here::here("code2_child_params", "template2_child_assess.qmd")}
+```
+

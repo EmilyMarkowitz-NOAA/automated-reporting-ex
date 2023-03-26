@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="template2_parent_files/libs/clipboard/clipboard.min.js"></script>
-<script src="template2_parent_files/libs/quarto-html/quarto.js"></script>
-<script src="template2_parent_files/libs/quarto-html/popper.min.js"></script>
-<script src="template2_parent_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="template2_parent_files/libs/quarto-html/anchor.min.js"></script>
-<link href="template2_parent_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="template2_parent_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="template2_parent_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="template2_parent_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="template2_parent_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="template3_parent_files/libs/clipboard/clipboard.min.js"></script>
+<script src="template3_parent_files/libs/quarto-html/quarto.js"></script>
+<script src="template3_parent_files/libs/quarto-html/popper.min.js"></script>
+<script src="template3_parent_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="template3_parent_files/libs/quarto-html/anchor.min.js"></script>
+<link href="template3_parent_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="template3_parent_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="template3_parent_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="template3_parent_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="template3_parent_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -46,6 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Talk like a Pirate!</h1>
+<p class="subtitle lead">DRAFT: March 26, 2023</p>
 </div>
 
 
@@ -60,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!-- Here in the 'setup' code chunk, we are stating that -->
+<!-- Instead of the 'setup' code chunk, we are stating that -->
 <!-- we never want to display chunks in our output -->
 <section id="about-example-2" class="level1">
 <h1>About example 2</h1>
@@ -69,9 +70,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Learn about ‘parent’ and ‘child’ docs</li>
 <li>Cycle through child docs with new scripts and parameterize a quarto document</li>
 <li>Apply chunk names</li>
+<li>Using local functions in in-line code chunks</li>
 </ul>
 <blockquote class="blockquote">
-<p>This example is based on the simpler and fabulous <a href="https://github.com/MargaretSiple-NOAA/parameterized-indexing-example">example by Margaret Siple</a></p>
+<p>This script is heavily based on the simpler and fabulous <a href="https://github.com/MargaretSiple-NOAA/parameterized-indexing-example">example by Margaret Siple</a></p>
 </blockquote>
 <section id="madlib-responces" class="level2">
 <h2 class="anchored" data-anchor-id="madlib-responces">MadLib Responces</h2>
@@ -84,6 +86,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Ye can always pretend to be a bloodthirsty <strong>noun1</strong>, threatening everyone by waving yer <strong>adjective1</strong> sword in the air, but until ye learn to <strong>verb1</strong> like a pirate, ye’ll never be <strong>adverb1</strong> accepted as an authentic <strong>noun2</strong>. So here’s what ye do: Cleverly work into yer daily conversations <strong>adjective2</strong> pirate phrases such as “Ahoy there, <strong>plural_noun1</strong>,” “Avast, ye <strong>plural_noun2</strong>,” and “Shiver me <strong>plural_noun3</strong>.” Remember to drop all yer <em>g</em>s when ye say such words as <em>sailin’</em>, <em>spittin’</em>, and <em>fightin’</em>. This will give ye <strong>a part_of_the_body1</strong> start to bein’ recognized as a swashbucklin’ <strong>noun3</strong>. Once ye have the lingo down pat, it helps to wear a three-cornered <strong>noun4</strong> on yer head, stash <strong>a noun5</strong> in yer pants, and keep <strong>a noun6</strong> perched atop yer <strong>part_of_the_body2</strong>. Aye, now yer be a real pirate!</p>
 <!-- MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/ -->
 <!-- the below chunk is pulling calling a child doc (`child = ...`) and must otherwise remain empty-->
+<!-- This child doc will, unless otherwise specified, -->
+<!-- inherit all of the formatting of the parent qmd -->
 </section>
 <section id="what-kinds-of-responces-did-users-submit" class="level2">
 <h2 class="anchored" data-anchor-id="what-kinds-of-responces-did-users-submit">What kinds of responces did users submit?</h2>

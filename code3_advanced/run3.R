@@ -13,18 +13,18 @@ googledrive::drive_auth()
 1
 googledrive::drive_download(
   file = googledrive::as_id(dir_googleform), 
-  path = here::here("data", "code1_madlib"), 
+  path = here::here("data", "madlib_resp"), 
   type = "csv", 
   overwrite = TRUE)
 
 # Load Data --------------------------------------------------------------------
 
-dat <- read.csv(file = here::here("data", "code1_madlib.csv"), 
+dat0 <- read.csv(file = here::here("data", "madlib_resp.csv"), 
                 header = TRUE)
 
 # remove EHM test data
 if (nrow(dat)>1) {
-  dat <- dat[-1,] 
+  dat0 <- dat0[-1,] 
 }
 
 # Functions --------------------------------------------------------------------
@@ -47,14 +47,20 @@ a_or_an <- function(text = "b") {
 
 # Run report! ------------------------------------------------------------------
 
+# output as html
+quarto::quarto_render(
+  input = here::here("code3_advanced", "template3_parent.qmd"), 
+  output_format = "html",  
+  execute_params = list(dat0 = dat0))
+
 # output as docx
 quarto::quarto_render(
-  input = here::here("code2_child_params", "template2_parent.qmd"), 
+  input = here::here("code3_advanced", "template3_parent.qmd"), 
   output_format = "docx",  
-  execute_params = list(dat1 = dat))
+  execute_params = list(dat0 = dat0))
 
 # output as pdf
 quarto::quarto_render(
-  input = here::here("code2_child_params", "template2_parent.qmd"), 
+  input = here::here("code3_advanced", "template3_parent.qmd"), 
   output_format = "pdf", 
-  execute_params = list(dat1 = dat))
+  execute_params = list(dat0 = dat0))
