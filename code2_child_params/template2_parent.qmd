@@ -1,0 +1,71 @@
+---
+title: "Talk like a Pirate!"
+format: pdf
+---
+
+<!-- Here in the 'setup' code chunk, we are stating that -->
+<!-- we never want to display chunks in our output -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE)
+```
+
+# About example 2
+
+This example expands on the previous example, but includes more skill building. Here you will learn:
+
+ - Learn about 'parent' and 'child' docs
+ - Cycle through child docs with new scripts and parameterize a quarto document
+ - Apply chunk names
+ - Using local functions in in-line code chunks
+
+> This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
+
+```{r data-wrangle}
+
+# Download Data ----------------------------------------------------------------
+
+library(here)
+library(googledrive)
+googledrive::drive_deauth()
+googledrive::drive_auth() # connect R to google drive
+1 # to pick the first auth option
+googledrive::drive_download( 
+  file = googledrive::as_id("https://docs.google.com/spreadsheets/d/1bLc_QS8zKcXW4umlAeR2GRBMMtCJHTqen-Ur0yQEHm4"), # download a specific document from google drive by it's ID
+  path = here::here("data", "code2_madlib"), # save your data
+  type = "csv", # save your data as a csv
+  overwrite = TRUE) # allow the funtion to overwrite the csv with the latest and greatest
+
+# Load Data --------------------------------------------------------------------
+
+dat0 <- read.csv(file = here::here("data", "code2_madlib.csv"), 
+                header = TRUE)
+
+# remove EHM test data
+if (nrow(dat0)>1) {
+  dat0 <- dat0[-1,] 
+}
+```
+
+## MadLib Responces
+
+These MadLib responses were generated on `r `Sys.Date()`. 
+
+```{r madlib-responces, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+src <- list() # an empty list to put all of the entry outputs in
+for (i in 1:nrow(dat0)) { # cycle through each row of the spreadsheet
+  dat <- dat0[i,] # subset data to the row of interest
+  # dynamically fill out the madlib template and add output to the list
+  src[[i]] <- knitr::knit_expand(
+    file = here::here('code2_child_params','template2_child_madlib_responces.qmd'))
+}
+# below, print the output from the spreadsheet used in the madlib template
+```
+
+`r paste(knitr::knit(text = unlist(src)), collapse = '\n')`
+
+<!-- the below chunk is pulling calling a child doc (`child = ...`) and must otherwise remain empty-->
+
+```{r assess-madlib_respones, child=here::here("code2_child_params", "template2_child_assess.qmd")}
+```
+

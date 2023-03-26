@@ -1,0 +1,45 @@
+---
+title: "Talk like a Pirate!"
+format: pdf
+editor: source
+---
+
+# About example 1
+
+In this example, we'll:
+
+ - dynamically fill in a simple, 1-template MadLib example for one entry
+ - use code chunks and in-line code calls. 
+ - apply some simple formatting (e.g., bolding, italics)
+
+```{r, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+
+# Download MadLib Google Form responces ----------------------------------------
+dir_googleform <- "https://docs.google.com/spreadsheets/d/1bLc_QS8zKcXW4umlAeR2GRBMMtCJHTqen-Ur0yQEHm4"
+library(here)
+library(googledrive)
+googledrive::drive_deauth()
+googledrive::drive_auth()
+1
+googledrive::drive_download(
+  file = googledrive::as_id(dir_googleform), 
+  path = here::here("data", "code1_madlib"), 
+  type = "csv", 
+  overwrite = TRUE)
+
+# Load MadLib Google Form responces --------------------------------------------
+dat0 <- read.csv(file = here::here("data", "code1_madlib.csv"), 
+         header = TRUE)
+
+ # pick a random entry as this template is only made for 1 entry
+dat <- dat0[sample(x = 1:nrow(dat0), size = 1),]
+
+```
+
+*`r ifelse(is.null(dat$Author), "Author unknown. ", paste0("By: ", dat$Author))`*
+
+Ye can always pretend to be a bloodthirsty **`r dat$noun1`**, threatening everyone by waving yer **`r dat$adjective1`** sword in the air, but until ye learn to **`r dat$verb1`** like a pirate, ye'll never be **`r dat$adverb1`** accepted as an authentic **`r dat$noun2`**. So here's what ye do: Cleverly work into yer daily conversations **`r dat$adjective2`** pirate phrases such as "Ahoy there, **`r dat$plural_noun1`**," "Avast, ye **`r dat$plural_noun2`**," and "Shiver me **`r dat$plural_noun3`**." Remember to drop all yer *g*s when ye say such words as *sailin'*, *spittin'*, and *fightin'*. This will give ye a/an **`r dat$part_of_the_body1`** start to bein' recognized as a swashbucklin' **`r dat$noun3`**. Once ye have the lingo down pat, it helps to wear a three-cornered **`r dat$noun4`** on yer head, stash a/an **`r dat$noun5`** in yer pants, and keep a/an **`r dat$noun6`** perched atop yer **`r dat$part_of_the_body2`**. Aye, now yer be a real pirate! 
+
+<!-- this is a quarto (and markdown) comment! -->
+<!-- MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/ -->
+

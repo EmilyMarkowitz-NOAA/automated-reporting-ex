@@ -1,0 +1,7 @@
+
+<!-- This child doc will, unless otherwise specified, -->
+<!-- inherit all of the formatting of the parent qmd -->
+
+## *`r ifelse(is.null(dat$Author), "Author unknown. ", paste0("By: ", dat$Author))`*
+
+Ye can always pretend to be a bloodthirsty **`r dat$noun1`**, threatening everyone by waving yer **`r dat$adjective1`** sword in the air, but until ye learn to **`r dat$verb1`** like a pirate, ye'll never be **`r dat$adverb1`** accepted as an authentic **`r dat$noun2`**. So here's what ye do: Cleverly work into yer daily conversations **`r dat$adjective2`** pirate phrases such as "Ahoy there, **`r dat$plural_noun1`**," "Avast, ye **`r dat$plural_noun2`**," and "Shiver me **`r dat$plural_noun3`**." Remember to drop all yer *g*s when ye say such words as *sailin'*, *spittin'*, and *fightin'*. This will give ye **`r a_or_an(text = dat$part_of_the_body1)` `r dat$part_of_the_body1`** start to bein' recognized as a swashbucklin' **`r dat$noun3`**. Once ye have the lingo down pat, it helps to wear a three-cornered **`r dat$noun4`** on yer head, stash **`r a_or_an(text = dat$noun5)` `r dat$noun5`** in yer pants, and keep **`r a_or_an(text = dat$noun6)` `r dat$noun6`** perched atop yer **`r dat$part_of_the_body2`**. Aye, now yer be a real pirate! 
