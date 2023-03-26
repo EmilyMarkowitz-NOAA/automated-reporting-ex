@@ -5,7 +5,7 @@
 
 ## Methods
 
-The original MadLib prompt was reformmated into a `.qmd` (Fig. @fig-madlib). 
+The original MadLib prompt was reformatted into a `.qmd` (@fig-madlib). 
 
 ```{r}
 #| label: fig-madlib
@@ -16,17 +16,17 @@ knitr::include_graphics(here::here("img","madlib_pirate.png"))
 
 ## Results: What kinds of responces did users submit?
 
-Collectively, the google form had `r nrow(dat0)` responses (Table @tab-madlib-resp). 
+Collectively, the google form had `r nrow(dat0)` responses (@tbl-madlib-resp). 
 
 ```{r}
-#| label: tab-madlib-resp
-#| fig-cap: "The raw google form responces. "
+#| label: tbl-madlib-resp
+#| tbl-cap: "The raw Google form responces. "
 
 library(gt)
-gt(dat)
+gt(dat0)
 ```
 
-In the below word cloud, we see if there were any common responses across enteries (fig. @fig-madlib-wordcloud). 
+In the below word cloud, we see if there were any common responses across enteries (@fig-madlib-wordcloud). 
 
 ```{r}
 #| label: fig-madlib-wordcloud

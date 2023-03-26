@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -61,37 +80,579 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!-- Instead of the 'setup' code chunk, we are stating that -->
-<!-- we never want to display chunks in our output -->
-<section id="about-example-2" class="level1">
-<h1>About example 2</h1>
-<p>This example expands on the previous example, but includes more skill building. Here you will learn:</p>
+<!-- Instead of the 'setup' code chunk, are able to add the setup parameters to the YAML -->
+<!-- Instead of loading content within the `.qmd` we include the elements as params in the YAML -->
+<section id="about-example-3" class="level1">
+<h1>About example 3</h1>
+<p>This example expands on the previous example. Here you will learn:</p>
 <ul>
-<li>Learn about ‘parent’ and ‘child’ docs</li>
-<li>Cycle through child docs with new scripts and parameterize a quarto document</li>
-<li>Apply chunk names</li>
-<li>Using local functions in in-line code chunks</li>
+<li>Call .qmd from .r script</li>
+<li>Play around with the YAML</li>
+<li>Apply table and figure cross referencing</li>
+<li>Apply citation cross referencing</li>
 </ul>
-<blockquote class="blockquote">
-<p>This script is heavily based on the simpler and fabulous <a href="https://github.com/MargaretSiple-NOAA/parameterized-indexing-example">example by Margaret Siple</a></p>
-</blockquote>
-<section id="madlib-responces" class="level2">
-<h2 class="anchored" data-anchor-id="madlib-responces">MadLib Responces</h2>
-<p>These MadLib responses were generated on <code>r</code>Sys.Date()`.</p>
+<p>Good examples of GitHub repositories starting to use these workflows include: - This script is heavily based on the simpler and fabulous <a href="https://github.com/MargaretSiple-NOAA/parameterized-indexing-example">example by Margaret Siple</a> - <a href="https://github.com/afsc-gap-products/gap_bs_data_report">Bering sea bottom trawl survey data reports</a>; which was used to produce <span class="citation" data-cites="2021NEBS2022 2018EBS2022 2019NEBS2022 2022NEBS2022">(<a href="#ref-2021NEBS2022" role="doc-biblioref">Markowitz, Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b</a>, <a href="#ref-2019NEBS2022" role="doc-biblioref">2022a</a>, <a href="#ref-2022NEBS2022" role="doc-biblioref">In review</a>; <a href="#ref-2018EBS2022" role="doc-biblioref">Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al., 2022</a>)</span></p>
+<section id="madlib-responses" class="level2">
+<h2 class="anchored" data-anchor-id="madlib-responses">MadLib Responses</h2>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
 <!-- This child doc will, unless otherwise specified, -->
 <!-- inherit all of the formatting of the parent qmd -->
+<!-- Note that the double curly brackets  can be used to inherit content from the global environment -->
+<div class="cell">
+
+</div>
 </section>
 <section id="by-testing-1-2-3" class="level2">
-<h2 class="anchored" data-anchor-id="by-testing-1-2-3"><em>By: Testing: 1, 2, 3!</em></h2>
-<p>Ye can always pretend to be a bloodthirsty <strong>noun1</strong>, threatening everyone by waving yer <strong>adjective1</strong> sword in the air, but until ye learn to <strong>verb1</strong> like a pirate, ye’ll never be <strong>adverb1</strong> accepted as an authentic <strong>noun2</strong>. So here’s what ye do: Cleverly work into yer daily conversations <strong>adjective2</strong> pirate phrases such as “Ahoy there, <strong>plural_noun1</strong>,” “Avast, ye <strong>plural_noun2</strong>,” and “Shiver me <strong>plural_noun3</strong>.” Remember to drop all yer <em>g</em>s when ye say such words as <em>sailin’</em>, <em>spittin’</em>, and <em>fightin’</em>. This will give ye <strong>a part_of_the_body1</strong> start to bein’ recognized as a swashbucklin’ <strong>noun3</strong>. Once ye have the lingo down pat, it helps to wear a three-cornered <strong>noun4</strong> on yer head, stash <strong>a noun5</strong> in yer pants, and keep <strong>a noun6</strong> perched atop yer <strong>part_of_the_body2</strong>. Aye, now yer be a real pirate!</p>
+<h2 class="anchored" data-anchor-id="by-testing-1-2-3"><strong>1:</strong> <em>By: Testing: 1, 2, 3!</em></h2>
+<p>Ye can always pretend to be a bloodthirsty <strong>noun1</strong>, threatening everyone by waving yer <strong>adjective1</strong> sword in the air, but until ye learn to <strong>verb1</strong> like a pirate, ye’ll never be accepted as an authentic <strong>noun2</strong>. So here’s what ye do: Cleverly work into yer daily conversations <strong>adjective2</strong> pirate phrases such as “Ahoy there, <strong>plural_noun1</strong>,” “Avast, ye <strong>plural_noun2</strong>,” and “Shiver me <strong>plural_noun3</strong>.” Remember to drop all yer <em>g</em>s when ye say such words as <em>sailin’</em>, <em>spittin’</em>, and <em>fightin’</em>. This will give ye <strong>a part_of_the_body1</strong> start to bein’ recognized as a swashbucklin’ <strong>noun3</strong>. Once ye have the lingo down pat, it helps to wear a three-cornered <strong>noun4</strong> on yer head, stash <strong>a noun5</strong> in yer pants, and keep <strong>a noun6</strong> perched atop yer <strong>part_of_the_body2</strong>. Aye, now yer be a real pirate!</p>
+<!-- MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/ -->
+<!-- This child doc will, unless otherwise specified, -->
+<!-- inherit all of the formatting of the parent qmd -->
+<!-- Note that the double curly brackets  can be used to inherit content from the global environment -->
+<div class="cell">
+
+</div>
+</section>
+<section id="by-em" class="level2">
+<h2 class="anchored" data-anchor-id="by-em"><strong>2:</strong> <em>By: Em</em></h2>
+<p>Ye can always pretend to be a bloodthirsty <strong>nurse</strong>, threatening everyone by waving yer <strong>cute</strong> sword in the air, but until ye learn to <strong>dance</strong> like a pirate, ye’ll never be accepted as an authentic <strong>belly dancer</strong>. So here’s what ye do: Cleverly work into yer daily conversations <strong>questionable</strong> pirate phrases such as “Ahoy there, <strong>teddy bears</strong>,” “Avast, ye <strong>scrunchies</strong>,” and “Shiver me <strong>camp fires</strong>.” Remember to drop all yer <em>g</em>s when ye say such words as <em>sailin’</em>, <em>spittin’</em>, and <em>fightin’</em>. This will give ye <strong>an elbow</strong> start to bein’ recognized as a swashbucklin’ <strong>pinky toe</strong>. Once ye have the lingo down pat, it helps to wear a three-cornered <strong>post card</strong> on yer head, stash <strong>a favorite pencil</strong> in yer pants, and keep <strong>a daffodil</strong> perched atop yer <strong>nostril</strong>. Aye, now yer be a real pirate!</p>
 <!-- MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/ -->
 <!-- the below chunk is pulling calling a child doc (`child = ...`) and must otherwise remain empty-->
 <!-- This child doc will, unless otherwise specified, -->
 <!-- inherit all of the formatting of the parent qmd -->
 </section>
-<section id="what-kinds-of-responces-did-users-submit" class="level2">
-<h2 class="anchored" data-anchor-id="what-kinds-of-responces-did-users-submit">What kinds of responces did users submit?</h2>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>The original MadLib prompt was reformatted into a <code>.qmd</code> (<a href="#fig-madlib">Figure&nbsp;1</a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-madlib" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../img/madlib_pirate.png" class="img-fluid figure-img" width="352"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: The original MadLib prompt.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
+<section id="results-what-kinds-of-responces-did-users-submit" class="level2">
+<h2 class="anchored" data-anchor-id="results-what-kinds-of-responces-did-users-submit">Results: What kinds of responces did users submit?</h2>
+<p>Collectively, the google form had 2 responses (<a href="#tbl-madlib-resp">Table&nbsp;1</a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-madlib-resp" class="anchored">
+
+<div id="rgwibikonc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#rgwibikonc) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+:where(#rgwibikonc) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#rgwibikonc) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#rgwibikonc) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#rgwibikonc) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#rgwibikonc) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#rgwibikonc) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#rgwibikonc) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#rgwibikonc) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+:where(#rgwibikonc) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#rgwibikonc) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#rgwibikonc) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#rgwibikonc) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#rgwibikonc) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgwibikonc) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#rgwibikonc) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#rgwibikonc) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgwibikonc) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#rgwibikonc) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgwibikonc) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#rgwibikonc) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgwibikonc) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgwibikonc) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgwibikonc) .gt_left {
+  text-align: left;
+}
+
+:where(#rgwibikonc) .gt_center {
+  text-align: center;
+}
+
+:where(#rgwibikonc) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#rgwibikonc) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#rgwibikonc) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#rgwibikonc) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#rgwibikonc) .gt_super {
+  font-size: 65%;
+}
+
+:where(#rgwibikonc) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#rgwibikonc) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#rgwibikonc) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#rgwibikonc) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#rgwibikonc) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#rgwibikonc) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#rgwibikonc) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Table&nbsp;1:  The raw Google form responces. </caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Timestamp">Timestamp</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Author">Author</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun1">noun1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="adjective1">adjective1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="verb1">verb1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="adverb1">adverb1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun2">noun2</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="adjective2">adjective2</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="plural_noun1">plural_noun1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="plural_noun2">plural_noun2</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="plural_noun3">plural_noun3</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="part_of_the_body1">part_of_the_body1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun3">noun3</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun4">noun4</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun5">noun5</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="noun6">noun6</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="part_of_the_body2">part_of_the_body2</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Timestamp" class="gt_row gt_right">3/25/2023 23:49:29</td>
+<td headers="Author" class="gt_row gt_left">Testing: 1, 2, 3!</td>
+<td headers="noun1" class="gt_row gt_left">noun1</td>
+<td headers="adjective1" class="gt_row gt_left">adjective1</td>
+<td headers="verb1" class="gt_row gt_left">verb1</td>
+<td headers="adverb1" class="gt_row gt_left">adverb1</td>
+<td headers="noun2" class="gt_row gt_left">noun2</td>
+<td headers="adjective2" class="gt_row gt_left">adjective2</td>
+<td headers="plural_noun1" class="gt_row gt_left">plural_noun1</td>
+<td headers="plural_noun2" class="gt_row gt_left">plural_noun2</td>
+<td headers="plural_noun3" class="gt_row gt_left">plural_noun3</td>
+<td headers="part_of_the_body1" class="gt_row gt_left">part_of_the_body1</td>
+<td headers="noun3" class="gt_row gt_left">noun3</td>
+<td headers="noun4" class="gt_row gt_left">noun4</td>
+<td headers="noun5" class="gt_row gt_left">noun5</td>
+<td headers="noun6" class="gt_row gt_left">noun6</td>
+<td headers="part_of_the_body2" class="gt_row gt_left">part_of_the_body2</td></tr>
+    <tr><td headers="Timestamp" class="gt_row gt_right">3/26/2023 11:54:38</td>
+<td headers="Author" class="gt_row gt_left">Em</td>
+<td headers="noun1" class="gt_row gt_left">nurse</td>
+<td headers="adjective1" class="gt_row gt_left">cute</td>
+<td headers="verb1" class="gt_row gt_left">dance</td>
+<td headers="adverb1" class="gt_row gt_left"></td>
+<td headers="noun2" class="gt_row gt_left">belly dancer</td>
+<td headers="adjective2" class="gt_row gt_left">questionable</td>
+<td headers="plural_noun1" class="gt_row gt_left">teddy bears</td>
+<td headers="plural_noun2" class="gt_row gt_left">scrunchies</td>
+<td headers="plural_noun3" class="gt_row gt_left">camp fires</td>
+<td headers="part_of_the_body1" class="gt_row gt_left">elbow</td>
+<td headers="noun3" class="gt_row gt_left">pinky toe</td>
+<td headers="noun4" class="gt_row gt_left">post card</td>
+<td headers="noun5" class="gt_row gt_left">favorite pencil</td>
+<td headers="noun6" class="gt_row gt_left">daffodil</td>
+<td headers="part_of_the_body2" class="gt_row gt_left">nostril</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>In the below word cloud, we see if there were any common responses across enteries (<a href="#fig-madlib-wordcloud">Figure&nbsp;2</a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-madlib-wordcloud" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="template3_parent_files/figure-html/fig-madlib-wordcloud-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: Wordcloud of MadLib google form responces.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="works-cited" class="level1">
+<h1>Works Cited</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-2018EBS2022" class="csl-entry" role="doc-biblioentry">
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K., Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022). <em>Results of the 2018 eastern <span>Bering Sea</span> continental shelf bottom trawl survey of groundfish and invertebrate fauna</em> (NOAA Tech. Memo. NMFS-F/SPO-450; p. 183). <span>U.S. Dep. Commer.</span> <a href="https://doi.org/10.25923/m4pw-t510">https://doi.org/10.25923/m4pw-t510</a>
+</div>
+<div id="ref-2019NEBS2022" class="csl-entry" role="doc-biblioentry">
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K., Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). <em>Results of the 2019 eastern and northern <span>Bering Sea</span> continental shelf bottom trawl survey of groundfish and invertebrate fauna</em> (NOAA Tech. Memo. NMFS-F/SPO-451; p. 225). <span>U.S. Dep. Commer.</span> <a href="https://doi.org/10.25923/d641-xb21">https://doi.org/10.25923/d641-xb21</a>
+</div>
+<div id="ref-2021NEBS2022" class="csl-entry" role="doc-biblioentry">
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K., Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). <em>Results of the 2021 eastern and northern <span>Bering Sea</span> continental shelf bottom trawl survey of groundfish and invertebrate fauna</em> (NOAA Tech. Memo. NMFS-F/SPO-452; p. 227). <span>U.S. Dep. Commer.</span> <a href="https://doi.org/10.25923/g1ny-y360">https://doi.org/10.25923/g1ny-y360</a>
+</div>
+<div id="ref-2022NEBS2022" class="csl-entry" role="doc-biblioentry">
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K., Rohan, S. K., Stevenson, D. E., and Britt, L. L. (In review). <em>Results of the 2022 eastern and northern <span>Bering Sea</span> continental shelf bottom trawl survey of groundfish and invertebrate fauna</em> [NOAA Tech. Memo.]. <span>U.S. Dep. Commer.</span>
+</div>
+</div>
 </section>
 
 </main>

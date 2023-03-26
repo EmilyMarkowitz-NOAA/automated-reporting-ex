@@ -50,21 +50,21 @@ a_or_an <- function(text = "b") {
 
 # output as html
 quarto::quarto_render(
-  input = here::here("code3_advanced", "template3_parent.qmd"), 
+  input = here::here("code3", "template3_parent.qmd"), 
   output_format = "html",  
   execute_params = list(dat0 = dat0, 
                         a_or_an = a_or_an))
 
 # output as docx
 quarto::quarto_render(
-  input = here::here("code3_advanced", "template3_parent.qmd"), 
+  input = here::here("code3", "template3_parent.qmd"), 
   output_format = "docx",  
   execute_params = list(dat0 = dat0, 
                         a_or_an = a_or_an))
 
 # output as pdf
 quarto::quarto_render(
-  input = here::here("code3_advanced", "template3_parent.qmd"), 
+  input = here::here("code3", "template3_parent.qmd"), 
   output_format = "pdf", 
   execute_params = list(dat0 = dat0, 
                         a_or_an = a_or_an))

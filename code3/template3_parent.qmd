@@ -3,10 +3,11 @@ title: "Talk like a Pirate!"
 subtitle: "`r paste0('DRAFT: ', format(Sys.time(), '%B %d, %Y'))`"
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
 bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
+link-citations: true
 format: 
   html: default
   docx:
-    reference-doc: "`r here::here('code3', 'format_styles_word_document.docx')`" 
+    reference-doc: "../code3/styles_reference.docx" 
   pdf: 
     geometry:
       - top=0.75in
@@ -39,11 +40,12 @@ This example expands on the previous example. Here you will learn:
  - Apply table and figure cross referencing
  - Apply citation cross referencing
 
-> This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
+
+Good examples of GitHub repositories starting to use these workflows include: 
+ - This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
+ - [Bering sea bottom trawl survey data reports](https://github.com/afsc-gap-products/gap_bs_data_report); which was used to produce [@2021NEBS2022; @2018EBS2022; @2019NEBS2022; @2022NEBS2022]
 
 ## MadLib Responses
-
-These MadLib responses were generated on `r `Sys.Date()`. 
 
 ```{r temp}
 
@@ -92,4 +94,9 @@ for (i in 1:nrow(dat0)) { # cycle through each row of the spreadsheet
 
 ```{r assess-madlib_respones, child=here::here("code3", "template3_child_assess.qmd")}
 ```
+
+
+# Works Cited
+
+<div id="refs"></div>
 

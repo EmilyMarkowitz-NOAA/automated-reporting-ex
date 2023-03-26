@@ -1,7 +1,6 @@
 ---
 title: "Talk like a Pirate!"
 format: docx
-editor: source
 ---
 
 # About example 1
