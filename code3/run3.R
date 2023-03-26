@@ -22,8 +22,9 @@ googledrive::drive_download(
 dat0 <- read.csv(file = here::here("data", "madlib_resp.csv"), 
                 header = TRUE)
 
+# Wrangle Data -----------------------------------------------------------------
 # remove EHM test data
-if (nrow(dat)>1) {
+if (nrow(dat0)>2) {
   dat0 <- dat0[-1,] 
 }
 
@@ -51,16 +52,19 @@ a_or_an <- function(text = "b") {
 quarto::quarto_render(
   input = here::here("code3_advanced", "template3_parent.qmd"), 
   output_format = "html",  
-  execute_params = list(dat0 = dat0))
+  execute_params = list(dat0 = dat0, 
+                        a_or_an = a_or_an))
 
 # output as docx
 quarto::quarto_render(
   input = here::here("code3_advanced", "template3_parent.qmd"), 
   output_format = "docx",  
-  execute_params = list(dat0 = dat0))
+  execute_params = list(dat0 = dat0, 
+                        a_or_an = a_or_an))
 
 # output as pdf
 quarto::quarto_render(
   input = here::here("code3_advanced", "template3_parent.qmd"), 
   output_format = "pdf", 
-  execute_params = list(dat0 = dat0))
+  execute_params = list(dat0 = dat0, 
+                        a_or_an = a_or_an))

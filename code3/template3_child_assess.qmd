@@ -16,7 +16,7 @@ knitr::include_graphics(here::here("img","madlib_pirate.png"))
 
 ## Results: What kinds of responces did users submit?
 
-Collectively, the google form had `r nrow(dat)` responses (Table @tab-madlib-resp). 
+Collectively, the google form had `r nrow(dat0)` responses (Table @tab-madlib-resp). 
 
 ```{r}
 #| label: tab-madlib-resp
@@ -25,7 +25,6 @@ Collectively, the google form had `r nrow(dat)` responses (Table @tab-madlib-res
 library(gt)
 gt(dat)
 ```
-
 
 In the below word cloud, we see if there were any common responses across enteries (fig. @fig-madlib-wordcloud). 
 
@@ -51,17 +50,16 @@ for (p in PKG) { # this loops through each package,
 
 dat1 <- data.frame(
   table( # find frequency of terms used
-    data.frame(t( # slightly transform input data
-      dat0[,-c(1:2)])))) # remove Timestamp and Author columns
+    unlist( # slightly transform input data
+      dat0[,-c(1:2)]))) # remove Timestamp and Author columns
 names(dat1) <- c("words", "Freq")
 
 # Create figure -----------------------------------------------------------------
-gg <- wordcloud::wordcloud(words = as.character(dat1$words), 
+wordcloud::wordcloud(words = as.character(dat1$words), 
           freq = as.numeric(dat1$Freq), 
           min.freq = 1,
           scale = c(1,3),
           max.words=200,
           random.order=FALSE, 
           rot.per=0.35 )
-gg
 ```
