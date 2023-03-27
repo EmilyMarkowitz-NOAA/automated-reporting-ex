@@ -54,23 +54,22 @@ These materials were developed for the 2023 UMass Dartmouth QuantFish Seminar Se
 
  - Final presentation slides will be posted after the seminar. In the mean time, those with access have the [google slides](https://docs.google.com/presentation/d/1-AbDrGG_8Vfxh_WacMPbPQuqneMvFNh6HCQrjSDLBUs/edit?usp=sharing). 
  - Script examples are available in this [repository](`r link_repo`). 
- - The first three examples are based on enteries to this [google form](https://forms.gle/stVH7EdhwH4n8azz7) where participants will 'MadLib' a story together. 
+ - The first three examples are based on entries to this [google form](https://forms.gle/stVH7EdhwH4n8azz7) where participants will 'MadLib' a story together. 
 
 ## Example 1
 
 Find the code for example 1 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code1). Run this code from the `template1.qmd` script. 
 
- - dynamically fill in a simple, 1-template MadLib example for one entry
- - use code chunks and in-line code calls. 
- - apply some simple formatting (e.g., bolding, italics)
+ - Dynamically fill in a simple, 1-template MadLib example for one entry
+ - Use code chunks and in-line code calls. 
+ - Apply some simple formatting (e.g., bolding, italics)
 
 ## Example 2
 
 Find the code for example 2 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code2). Run this code from the `template1_parent.qmd` script. 
 
- - Learn about 'parent' and 'child' docs
- - Cycle through child docs with new scripts and parameterize a quarto document
- - Apply chunk names
+ - Cycle data through parent and child quarto docs
+ - Naming chunks
  - Using local functions in in-line code chunks
  
 ## Example 3

@@ -44,7 +44,7 @@ Markowitz](https://emilyhmarkowitz.github.io/emilyhmarkowitz/).
   slides](https://docs.google.com/presentation/d/1-AbDrGG_8Vfxh_WacMPbPQuqneMvFNh6HCQrjSDLBUs/edit?usp=sharing).
 - Script examples are available in this
   [repository](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex).
-- The first three examples are based on enteries to this [google
+- The first three examples are based on entries to this [google
   form](https://forms.gle/stVH7EdhwH4n8azz7) where participants will
   ‘MadLib’ a story together.
 
@@ -54,9 +54,9 @@ Find the code for example 1
 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code1).
 Run this code from the `template1.qmd` script.
 
-- dynamically fill in a simple, 1-template MadLib example for one entry
-- use code chunks and in-line code calls.
-- apply some simple formatting (e.g., bolding, italics)
+- Dynamically fill in a simple, 1-template MadLib example for one entry
+- Use code chunks and in-line code calls.
+- Apply some simple formatting (e.g., bolding, italics)
 
 ## Example 2
 
@@ -64,10 +64,8 @@ Find the code for example 2
 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code2).
 Run this code from the `template1_parent.qmd` script.
 
-- Learn about ‘parent’ and ‘child’ docs
-- Cycle through child docs with new scripts and parameterize a quarto
-  document
-- Apply chunk names
+- Cycle data through parent and child quarto docs
+- Naming chunks
 - Using local functions in in-line code chunks
 
 ## Example 3
@@ -197,25 +195,23 @@ repository](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/issues
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
-    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [1] LC_COLLATE=English_United States.utf8 
+    FALSE [2] LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                          
     FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
-    FALSE other attached packages:
-    FALSE [1] here_1.0.1
-    FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] Rcpp_1.0.10        rstudioapi_0.14    knitr_1.42         magrittr_2.0.3     wordcloud_2.6     
-    FALSE  [6] R6_2.5.1           rlang_1.1.0        fastmap_1.1.1      fansi_1.0.4        httr_1.4.5        
-    FALSE [11] tools_4.2.3        data.table_1.14.8  xfun_0.38          utf8_1.2.3         cli_3.6.1         
-    FALSE [16] htmltools_0.5.5    yaml_2.3.7         rprojroot_2.0.3    digest_0.6.31      tibble_3.2.1      
-    FALSE [21] lifecycle_1.0.3    quarto_1.2         processx_3.8.0     RColorBrewer_1.1-3 later_1.3.0       
-    FALSE [26] vctrs_0.6.1        ps_1.7.3           glue_1.6.2         evaluate_0.20      rmarkdown_2.20    
-    FALSE [31] stringi_1.7.12     compiler_4.2.3     pillar_1.9.0       readtext_0.81      jsonlite_1.8.4    
-    FALSE [36] pkgconfig_2.0.3
+    FALSE  [1] fansi_1.0.4       utf8_1.2.3        digest_0.6.31     R6_2.5.1         
+    FALSE  [5] lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.20     pillar_1.9.0     
+    FALSE  [9] httr_1.4.5        rlang_1.1.0       stringi_1.7.12    cli_3.6.1        
+    FALSE [13] data.table_1.14.8 rstudioapi_0.14   vctrs_0.6.1       rmarkdown_2.20   
+    FALSE [17] tools_4.2.3       glue_1.6.2        xfun_0.38         yaml_2.3.7       
+    FALSE [21] fastmap_1.1.1     compiler_4.2.3    pkgconfig_2.0.3   readtext_0.81    
+    FALSE [25] htmltools_0.5.5   knitr_1.42        tibble_3.2.1
 
 ## NOAA README
 
