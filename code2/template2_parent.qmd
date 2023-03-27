@@ -12,14 +12,10 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, error=FALSE, include=FALSE, com
 
 # About example 2
 
-This example expands on the previous example, but includes more skill building. Here you will learn:
+This example expands on the previous example^[MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/], but includes more skill building. Here you will learn:
 
- - Learn about 'parent' and 'child' docs
- - Cycle through child docs with new scripts and parameterize a quarto document
+ - Cycle data through parent and child quarto docs
  - Apply chunk names
- - Using local functions in in-line code chunks
-
-> This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
 
 ```{r data-wrangle}
 

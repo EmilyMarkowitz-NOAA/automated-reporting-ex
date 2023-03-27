@@ -17,12 +17,13 @@ National Oceanic and Atmospheric Administration, - Seattle, WA 98115
 
 > - [*Purpose*](#purpose)
 > - [*Outline*](#outline)
->   - [*Presenation materials *](#presenation-materials-)
+>   - [*Presenation materials*](#presenation-materials)
 >   - [*Example 1*](#example-1)
 >   - [*Example 2*](#example-2)
 >   - [*Example 3*](#example-3)
 >   - [*Example 4*](#example-4)
 > - [*Additional Resources*](#additional-resources)
+> - [*Works Cited*](#works-cited)
 > - [*Suggestions and Comments*](#suggestions-and-comments)
 >   - [*R Version Metadata*](#r-version-metadata)
 >   - [*NOAA README*](#noaa-readme)
@@ -39,8 +40,8 @@ Markowitz](https://emilyhmarkowitz.github.io/emilyhmarkowitz/).
 ## Presenation materials
 
 - Final presentation slides will be posted after the seminar. In the
-  mean time, for those with access, you can find the live google slides
-  \[here\](<https://docs.google.com/presentation/d/1-AbDrGG_8Vfxh_WacMPbPQuqneMvFNh6HCQrjSDLBUs/edit?usp=sharing>.
+  mean time, those with access have the [google
+  slides](https://docs.google.com/presentation/d/1-AbDrGG_8Vfxh_WacMPbPQuqneMvFNh6HCQrjSDLBUs/edit?usp=sharing).
 - Script examples are available in this
   [repository](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex).
 - The first three examples are based on enteries to this [google
@@ -75,11 +76,12 @@ Find the code for example 3
 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code3).
 Run this code from the `run3.r` script.
 
-- Call .qmd from .r script
-- Play around with YAML settings
+- Call `.qmd` from `.r` script
+- Play around with `YAML` settings
 - Apply table and figure cross referencing
 - Apply citation cross referencing
-- Use citation style library (CSL) and bibtex file (contains citations)
+- Use citation style library (`.csl`)
+- Use bibtex file (`.bib`, contains citations)
 
 ## Example 4
 
@@ -87,11 +89,10 @@ Find the code for example 4
 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code4).
 Run this code from the `run4.r` script.
 
-This example leaves the MadLib example behind and starts to play with
-some real data and annual reporting on snailfish catches in the eastern
-Bering Sea bottom trawl survey. Data is publicly available from the
-Fisheries One Stop Shop (FOSS, NOAA Fisheries Alaska Fisheries Science
-Center (2023)) and in this [GitHub
+Here we will start to work with some real data and annual reporting on
+snailfish catches in the eastern Bering Sea bottom trawl survey. Data is
+publicly available from the Fisheries One Stop Shop (FOSS, NOAA
+Fisheries Alaska Fisheries Science Center (2023)) and in this [GitHub
 Repo](https://github.com/afsc-gap-products/gap_public_data).
 
 # Additional Resources
@@ -99,24 +100,27 @@ Repo](https://github.com/afsc-gap-products/gap_public_data).
 - This script is heavily based on the simpler and fabulous [example by
   Margaret
   Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
-- Anything and everything from (**eeholmes?**)!
-  - [quarto-thesis](https://github.com/nmfs-opensci/quarto-thesis) by
-    Eli Holmes
-  - [Other quarto examples and templates
-    (**nmfs-opensci?**)](https://github.com/orgs/nmfs-opensci/repositories?q=quarto&type=all&language=&sort=)
+- Anything and everything from [Eli Hmles](http://eeholmes.github.io/) @
+  eeholmes!
+  - [quarto-thesis](https://github.com/nmfs-opensci/quarto-thesis)
+  - [Other quarto examples and templates @
+    nmfs-opensci](https://github.com/orgs/nmfs-opensci/repositories?q=quarto&type=all&language=&sort=)
   - Her [youtube
     channel](https://www.youtube.com/@eeholmes-datascience4849) is
-    teaming with awesome examples.
+    teaming with awesome examples!
 - Example repos and publications include
-  - Annual Bering Sea Bottom Trawl Data Reports (Markowitz, Dawson,
-    Charriere, Prohaska, Rohan, Stevenson, et al., 2022b, 2022a, In
-    review; Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et
-    al., 2022)
+  - [Annual Bering Sea Bottom Trawl Data
+    Reports](https://github.com/afsc-gap-products/gap_bs_data_report)
+    (Markowitz, Dawson, Charriere, Prohaska, Rohan, Stevenson, et al.,
+    2022b, 2022a, In review; Markowitz, Dawson, Charriere, Prohaska,
+    Rohan, Haehn, et al., 2022)
   - [Daily Temperature and Survey Progress
     Maps](https://github.com/afsc-gap-products/survey-live-temperature-map)
     (Markowitz, Dawson, Charriere, Prohaska, Rohan, Stevenson, et al.,
     2022b, 2022a, In review; Markowitz, Dawson, Charriere, Prohaska,
     Rohan, Haehn, et al., 2022)
+
+# Works Cited
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
@@ -193,8 +197,9 @@ repository](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/issues
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -203,15 +208,14 @@ repository](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/issues
     FALSE [1] here_1.0.1
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] Rcpp_1.0.10        pillar_1.9.0       compiler_4.2.3     later_1.3.0        class_7.3-21       tools_4.2.3       
-    FALSE  [7] readtext_0.81      digest_0.6.31      gtable_0.3.3       jsonlite_1.8.4     evaluate_0.20      lifecycle_1.0.3   
-    FALSE [13] tibble_3.2.1       pkgconfig_2.0.3    rlang_1.1.0        cli_3.6.1          DBI_1.1.3          rstudioapi_0.14   
-    FALSE [19] yaml_2.3.7         xfun_0.38          fastmap_1.1.1      e1071_1.7-13       dplyr_1.1.1        httr_1.4.5        
-    FALSE [25] knitr_1.42         generics_0.1.3     vctrs_0.6.1        tidyselect_1.2.0   grid_4.2.3         classInt_0.4-9    
-    FALSE [31] rprojroot_2.0.3    glue_1.6.2         data.table_1.14.8  sf_1.0-12          R6_2.5.1           processx_3.8.0    
-    FALSE [37] fansi_1.0.4        rmarkdown_2.20     ggplot2_3.4.1      magrittr_2.0.3     scales_1.2.1       akgfmaps_2.3.1    
-    FALSE [43] units_0.8-1        ps_1.7.3           htmltools_0.5.5    colorspace_2.1-0   KernSmooth_2.23-20 utf8_1.2.3        
-    FALSE [49] proxy_0.4-27       stringi_1.7.12     munsell_0.5.0      quarto_1.2
+    FALSE  [1] Rcpp_1.0.10        rstudioapi_0.14    knitr_1.42         magrittr_2.0.3     wordcloud_2.6     
+    FALSE  [6] R6_2.5.1           rlang_1.1.0        fastmap_1.1.1      fansi_1.0.4        httr_1.4.5        
+    FALSE [11] tools_4.2.3        data.table_1.14.8  xfun_0.38          utf8_1.2.3         cli_3.6.1         
+    FALSE [16] htmltools_0.5.5    yaml_2.3.7         rprojroot_2.0.3    digest_0.6.31      tibble_3.2.1      
+    FALSE [21] lifecycle_1.0.3    quarto_1.2         processx_3.8.0     RColorBrewer_1.1-3 later_1.3.0       
+    FALSE [26] vctrs_0.6.1        ps_1.7.3           glue_1.6.2         evaluate_0.20      rmarkdown_2.20    
+    FALSE [31] stringi_1.7.12     compiler_4.2.3     pillar_1.9.0       readtext_0.81      jsonlite_1.8.4    
+    FALSE [36] pkgconfig_2.0.3
 
 ## NOAA README
 

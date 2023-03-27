@@ -29,17 +29,14 @@ execute:
 
 # About example 3
 
-This example expands on the previous example. Here you will learn:
+This example expands on the previous example^[MadLib from:  https://www.pinterest.com/pin/sample-best-of-mad-libs--845550898799970448/]. Here you will learn:
 
  - Call .qmd from .r script
  - Play around with the YAML
  - Apply table and figure cross referencing
  - Apply citation cross referencing
- - Use citation style library (CSL) and bibtex file (contains citations)
-
-Good examples of GitHub repositories starting to use these workflows include: 
- - This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
- - [Bering sea bottom trawl survey data reports](https://github.com/afsc-gap-products/gap_bs_data_report); which was used to produce [@2021NEBS2022; @2018EBS2022; @2019NEBS2022; @2022NEBS2022]
+ - Use citation style library (CSL) 
+ - Use bibtex file (contains citations)
 
 ## MadLib Responses
 
