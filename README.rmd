@@ -46,10 +46,59 @@ toc <- paste0(toc_list, "*](#", toc_link, ")", collapse = "\n")
 
 # Purpose
 
+These materials were developed for the 2023 UMass Dartmouth QuantFish Seminar Series by, myself, [Em Markowitz](https://emilyhmarkowitz.github.io/emilyhmarkowitz/). 
 
-# Example repos and publications
+# Outline
 
-[@2021NEBS2022; @2018EBS2022; @2019NEBS2022; @2022NEBS2022; @AI2018; @GOA2018]
+## Presenation materials 
+
+ - Final presentation slides will be posted after the seminar. In the mean time, for those with access, you can find the live google slides [here](https://docs.google.com/presentation/d/1-AbDrGG_8Vfxh_WacMPbPQuqneMvFNh6HCQrjSDLBUs/edit?usp=sharing. 
+ - Script examples are available in this [repository](`r link_repo`). 
+ - The first three examples are based on enteries to this [google form](https://forms.gle/stVH7EdhwH4n8azz7) where participants will 'MadLib' a story together. 
+
+## Example 1
+
+Find the code for example 1 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code1). Run this code from the `template1.qmd` script. 
+
+ - dynamically fill in a simple, 1-template MadLib example for one entry
+ - use code chunks and in-line code calls. 
+ - apply some simple formatting (e.g., bolding, italics)
+
+## Example 2
+
+Find the code for example 2 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code2). Run this code from the `template1_parent.qmd` script. 
+
+ - Learn about 'parent' and 'child' docs
+ - Cycle through child docs with new scripts and parameterize a quarto document
+ - Apply chunk names
+ - Using local functions in in-line code chunks
+ 
+## Example 3
+
+Find the code for example 3 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code3). Run this code from the `run3.r` script. 
+
+ - Call .qmd from .r script
+ - Play around with YAML settings
+ - Apply table and figure cross referencing
+ - Apply citation cross referencing
+ - Use citation style library (CSL) and bibtex file (contains citations)
+
+## Example 4
+
+Find the code for example 4 [here](https://github.com/EmilyMarkowitz-NOAA/automated-reporting-ex/tree/main/code4). Run this code from the `run4.r` script. 
+
+This example leaves the MadLib example behind and starts to play with some real data and annual reporting on snailfish catches in the eastern Bering Sea bottom trawl survey. Data is publicly available from the Fisheries One Stop Shop (FOSS, @FOSSAFSCData) and in this [GitHub Repo](https://github.com/afsc-gap-products/gap_public_data). 
+
+# Additional Resources
+
+ - This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
+ - Anything and everything from @eeholmes!
+    - [quarto-thesis](https://github.com/nmfs-opensci/quarto-thesis) by Eli Holmes
+    - [Other quarto examples and templates @nmfs-opensci](https://github.com/orgs/nmfs-opensci/repositories?q=quarto&type=all&language=&sort=)
+    - Her [youtube channel](https://www.youtube.com/@eeholmes-datascience4849) is teaming with awesome examples. 
+  - Example repos and publications include 
+    - Annual Bering Sea Bottom Trawl Data Reports [@2021NEBS2022; @2018EBS2022; @2019NEBS2022; @2022NEBS2022]
+    - [Daily Temperature and Survey Progress Maps](https://github.com/afsc-gap-products/survey-live-temperature-map) [@2021NEBS2022; @2018EBS2022; @2019NEBS2022; @2022NEBS2022]
 
 <div id="refs"></div>
 

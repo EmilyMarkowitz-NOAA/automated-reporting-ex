@@ -17,15 +17,11 @@ format:
       - heightrounded
     number-sections: true
     toc: false
-editor: source
 execute:
   warning: false
   echo: false
   message: false
   error: false
-params: 
-  dat0: data.frame()
-  a_or_an: function()
 ---
 
 <!-- Instead of the 'setup' code chunk, are able to add the setup parameters to the YAML -->
@@ -39,7 +35,7 @@ This example expands on the previous example. Here you will learn:
  - Play around with the YAML
  - Apply table and figure cross referencing
  - Apply citation cross referencing
-
+ - Use citation style library (CSL) and bibtex file (contains citations)
 
 Good examples of GitHub repositories starting to use these workflows include: 
  - This script is heavily based on the simpler and fabulous [example by Margaret Siple](https://github.com/MargaretSiple-NOAA/parameterized-indexing-example)
@@ -47,33 +43,25 @@ Good examples of GitHub repositories starting to use these workflows include:
 
 ## MadLib Responses
 
-```{r temp}
+```{r params}
 
-dat0 <- read.csv(file = here::here("data", "madlib_resp.csv"), 
-                header = TRUE)
+# Install libraries ------------------------------------------------------------
+PKG <- c(
+  "wordcloud", 
+  "wordcloud2", 
+  "gt"
+)
 
-# remove EHM test data
-if (nrow(dat0)>2) {
-  dat0 <- dat0[-1,] 
+for (p in PKG) { # this loops through each package, 
+  if(!require(p,character.only = TRUE)) {  # checks to see if you have the package installed
+    install.packages(p, verbose = FALSE) # installs the package if it is not installed
+    require(p,character.only = TRUE)} # and loads the package library
 }
+# Load helper functions --------------------------------------------------------
+source(here::here("code3", "data.r"))
+source(here::here("code3", "functions.r"))
 
-#' Determine if a word should be preceeded by "a" or "an" in text
-#'
-#' @param text Character. A word or phrase to consider. The function will only use the first character of the entry. 
-#'
-#' @examples
-#` a_or_an(text = "Elephant")
-#` a_or_an(text = "mammoth")
-a_or_an <- function(text = "b") {
-  out <- ifelse(test = # is the first letter a vowel?
-                  substr(x = tolower(text), start = 1, stop = 1) %in% 
-                  c("a", "e", "i", "o", "u"), 
-                yes = "an", 
-                no = "a")
-  return(out)
-}
 ```
-
 
 ```{r madlib-responces}
 

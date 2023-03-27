@@ -53,6 +53,7 @@ div.csl-indent {
 <link href="template3_parent_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="template3_parent_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -65,7 +66,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Talk like a Pirate!</h1>
-<p class="subtitle lead">DRAFT: March 26, 2023</p>
+<p class="subtitle lead">DRAFT: March 27, 2023</p>
 </div>
 
 
@@ -90,6 +91,7 @@ div.csl-indent {
 <li>Play around with the YAML</li>
 <li>Apply table and figure cross referencing</li>
 <li>Apply citation cross referencing</li>
+<li>Use citation style library (CSL) and bibtex file (contains citations)</li>
 </ul>
 <p>Good examples of GitHub repositories starting to use these workflows include: - This script is heavily based on the simpler and fabulous <a href="https://github.com/MargaretSiple-NOAA/parameterized-indexing-example">example by Margaret Siple</a> - <a href="https://github.com/afsc-gap-products/gap_bs_data_report">Bering sea bottom trawl survey data reports</a>; which was used to produce <span class="citation" data-cites="2021NEBS2022 2018EBS2022 2019NEBS2022 2022NEBS2022">(<a href="#ref-2021NEBS2022" role="doc-biblioref">Markowitz, Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b</a>, <a href="#ref-2019NEBS2022" role="doc-biblioref">2022a</a>, <a href="#ref-2022NEBS2022" role="doc-biblioref">In review</a>; <a href="#ref-2018EBS2022" role="doc-biblioref">Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al., 2022</a>)</span></p>
 <section id="madlib-responses" class="level2">
@@ -147,12 +149,12 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-madlib-resp" class="anchored">
 
-<div id="rgwibikonc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="geoybxglnz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#rgwibikonc) .gt_table {
+:where(#geoybxglnz) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -177,7 +179,7 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_heading {
+:where(#geoybxglnz) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -189,12 +191,12 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_caption {
+:where(#geoybxglnz) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#rgwibikonc) .gt_title {
+:where(#geoybxglnz) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -206,7 +208,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-:where(#rgwibikonc) .gt_subtitle {
+:where(#geoybxglnz) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -218,13 +220,13 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-:where(#rgwibikonc) .gt_bottom_border {
+:where(#geoybxglnz) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_col_headings {
+:where(#geoybxglnz) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -239,7 +241,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_col_heading {
+:where(#geoybxglnz) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -259,7 +261,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-:where(#rgwibikonc) .gt_column_spanner_outer {
+:where(#geoybxglnz) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -271,15 +273,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-:where(#rgwibikonc) .gt_column_spanner_outer:first-child {
+:where(#geoybxglnz) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#rgwibikonc) .gt_column_spanner_outer:last-child {
+:where(#geoybxglnz) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#rgwibikonc) .gt_column_spanner {
+:where(#geoybxglnz) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -291,7 +293,7 @@ div.csl-indent {
   width: 100%;
 }
 
-:where(#rgwibikonc) .gt_group_heading {
+:where(#geoybxglnz) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -317,7 +319,7 @@ div.csl-indent {
   text-align: left;
 }
 
-:where(#rgwibikonc) .gt_empty_group_heading {
+:where(#geoybxglnz) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -332,15 +334,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-:where(#rgwibikonc) .gt_from_md > :first-child {
+:where(#geoybxglnz) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#rgwibikonc) .gt_from_md > :last-child {
+:where(#geoybxglnz) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#rgwibikonc) .gt_row {
+:where(#geoybxglnz) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -359,7 +361,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-:where(#rgwibikonc) .gt_stub {
+:where(#geoybxglnz) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -372,7 +374,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-:where(#rgwibikonc) .gt_stub_row_group {
+:where(#geoybxglnz) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -386,11 +388,11 @@ div.csl-indent {
   vertical-align: top;
 }
 
-:where(#rgwibikonc) .gt_row_group_first td {
+:where(#geoybxglnz) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#rgwibikonc) .gt_summary_row {
+:where(#geoybxglnz) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -400,16 +402,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-:where(#rgwibikonc) .gt_first_summary_row {
+:where(#geoybxglnz) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_first_summary_row.thick {
+:where(#geoybxglnz) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#rgwibikonc) .gt_last_summary_row {
+:where(#geoybxglnz) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -419,7 +421,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_grand_summary_row {
+:where(#geoybxglnz) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -429,7 +431,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-:where(#rgwibikonc) .gt_first_grand_summary_row {
+:where(#geoybxglnz) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -439,11 +441,11 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_striped {
+:where(#geoybxglnz) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#rgwibikonc) .gt_table_body {
+:where(#geoybxglnz) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -452,7 +454,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_footnotes {
+:where(#geoybxglnz) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -466,7 +468,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_footnote {
+:where(#geoybxglnz) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -475,7 +477,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-:where(#rgwibikonc) .gt_sourcenotes {
+:where(#geoybxglnz) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -489,7 +491,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-:where(#rgwibikonc) .gt_sourcenote {
+:where(#geoybxglnz) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -497,64 +499,64 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-:where(#rgwibikonc) .gt_left {
+:where(#geoybxglnz) .gt_left {
   text-align: left;
 }
 
-:where(#rgwibikonc) .gt_center {
+:where(#geoybxglnz) .gt_center {
   text-align: center;
 }
 
-:where(#rgwibikonc) .gt_right {
+:where(#geoybxglnz) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#rgwibikonc) .gt_font_normal {
+:where(#geoybxglnz) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#rgwibikonc) .gt_font_bold {
+:where(#geoybxglnz) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#rgwibikonc) .gt_font_italic {
+:where(#geoybxglnz) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#rgwibikonc) .gt_super {
+:where(#geoybxglnz) .gt_super {
   font-size: 65%;
 }
 
-:where(#rgwibikonc) .gt_footnote_marks {
+:where(#geoybxglnz) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#rgwibikonc) .gt_asterisk {
+:where(#geoybxglnz) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#rgwibikonc) .gt_indent_1 {
+:where(#geoybxglnz) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#rgwibikonc) .gt_indent_2 {
+:where(#geoybxglnz) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#rgwibikonc) .gt_indent_3 {
+:where(#geoybxglnz) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#rgwibikonc) .gt_indent_4 {
+:where(#geoybxglnz) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#rgwibikonc) .gt_indent_5 {
+:where(#geoybxglnz) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -635,6 +637,13 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p>Black-Scholes (<a href="#eq-black-scholes">Equation&nbsp;1</a>) is a mathematical model that seeks to explain the behavior of financial derivatives:</p>
+<p><span id="eq-black-scholes"><span class="math display">\[
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C
+\tag{1}\]</span></span></p>
 </section>
 </section>
 <section id="works-cited" class="level1">
